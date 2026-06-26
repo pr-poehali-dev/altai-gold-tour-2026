@@ -45,6 +45,14 @@ const days = [
   },
 ];
 
+const finale = {
+  cover: 'https://cdn.poehali.dev/projects/716acd90-5df6-418c-9dc5-4828f17b7e9c/bucket/1a7e4345-ddd4-4ee8-8fbe-9bf6171f0bf4.jpeg',
+  gallery: [
+    'https://cdn.poehali.dev/projects/716acd90-5df6-418c-9dc5-4828f17b7e9c/bucket/1a7e4345-ddd4-4ee8-8fbe-9bf6171f0bf4.jpeg',
+    'https://cdn.poehali.dev/files/e88e1f44-99d7-4abf-81ec-9b468df5b9d2.jpeg',
+  ],
+};
+
 const team = [
   { name: 'Анна Светлова', role: 'Основатель и гид', icon: 'Mountain' },
   { name: 'Дмитрий Орлов', role: 'Водитель-проводник', icon: 'Car' },
@@ -126,6 +134,34 @@ export default function Index() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* FINALE — DAY 6 */}
+      <section className="relative py-20 md:py-28 overflow-hidden">
+        <img src={finale.cover} alt="Прощание с Алтаем" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-altai-stone/85" />
+        <div className="relative z-10 container max-w-4xl text-center text-altai-cream">
+          <div className="inline-flex items-center gap-2 bg-altai-ochre text-white font-display text-xl font-bold px-5 py-2 rounded-full mb-6">
+            <Icon name="Plane" size={18} />
+            День 6 — финал
+          </div>
+          <h2 className="font-display text-5xl md:text-6xl font-bold mb-6 text-balance">
+            Прощаемся с Алтаем
+          </h2>
+          <p className="text-lg text-altai-cream/90 mb-4 text-balance">
+            После сытного завтрака — индивидуальный трансфер в аэропорт в зависимости от времени вашего вылета. Вас ждёт дорога домой.
+          </p>
+          <p className="text-lg text-altai-cream/90 mb-8 text-balance">
+            Но мы не прощаемся! После такого путешествия каждый станет друг другу больше, чем просто попутчик. Поездка с нами — это заряд классных эмоций, любви и заботы.
+          </p>
+          <div className="grid grid-cols-2 gap-4 max-w-2xl mx-auto">
+            {finale.gallery.map((img) => (
+              <div key={img} className="overflow-hidden rounded-2xl shadow-xl">
+                <img src={img} alt="Группа Мечта Тур" className="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-700" />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
