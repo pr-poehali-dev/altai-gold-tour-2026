@@ -4,8 +4,14 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --altai-teal: 184 42% 42%;
+    --altai-ochre: 28 58% 52%;
+    --altai-moss: 96 22% 42%;
+    --altai-stone: 30 12% 38%;
+    --altai-cream: 40 38% 96%;
+
+    --background: 40 38% 97%;
+    --foreground: 30 18% 18%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -13,11 +19,11 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 184 42% 42%;
+    --primary-foreground: 40 38% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 28 58% 52%;
+    --secondary-foreground: 40 38% 97%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -96,6 +102,19 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .grain {
+    background-image: radial-gradient(
+      hsl(var(--altai-stone) / 0.04) 1px,
+      transparent 1px
+    );
+    background-size: 4px 4px;
   }
 }
